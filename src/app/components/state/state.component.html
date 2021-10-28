@@ -1,0 +1,51 @@
+<div class="state">
+  <div class="group1">
+    <div *ngIf="display==0" class="cases">
+      <div>
+        <h3>Total {{this.state}} Cases</h3>
+        <span>{{total.cases}}</span>
+      </div>
+    </div>
+    <div *ngIf="display==1" class="deaths">
+      <div>
+        <h3>Total {{this.state}} Deaths</h3>
+        <span>{{total.deaths}}</span>
+
+      </div>
+    </div>
+    <div *ngIf="display==2" class="tests">
+      <div>
+        <h3>Total {{this.state}} Tests</h3>
+        <span>{{total.tested}}</span>
+
+      </div>
+    </div>
+  </div>
+  <div class="group2 bottom mbottom">
+    <div class="bottons">
+      <button (click)="display=0" [className]="display===0 ? 'active' : 'inactive'">State Cases</button>
+    <button (click)="display=1" [className]="display===1 ? 'active' : 'inactive'">State Deaths</button>
+    <button (click)="display=2" [className]="display===2 ? 'active' : 'inactive'">State Tests</button>
+    </div>
+  </div>
+  <div class="group3 bottom mbottom">
+    <div class="pctTests right">
+      <h3>{{this.state}} Population Tested</h3>
+      <span>{{total.pctTest}}%</span>
+    </div>
+    <div class="pctPositive">
+      <h3>Positive Caes Among {{this.state}} Tests</h3>
+      <span>{{total.pctPositive}}%</span>
+    </div>
+  </div>
+  <div class="group4 bottom mbottom">
+    <div class="chart">
+      <app-chart></app-chart>
+    </div>
+  </div>
+  <div class="group5 mbottom">
+    <p>
+      <span >Data sources: Coronavirus COVID-19 Global Cases by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University; the Red Cross; the Census American Community Survey; the Bureau of Labor and Statistics.</span>
+    </p>
+  </div>
+</div>

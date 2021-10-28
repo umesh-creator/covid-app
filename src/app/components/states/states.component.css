@@ -1,0 +1,39 @@
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+.scroll{
+  height: 70vh;
+  overflow-y: scroll;
+}
+.state{
+  width:100%;
+}
+
+h2{
+  text-align: center;
+}
+.state div{
+  border-bottom:1px solid grey;
+}
+
+.state a{
+  color:#4c4c4c;
+  display: block;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.active{
+  background-color:lightblue;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .scroll{
+    height: 40vh;
+  }
+}

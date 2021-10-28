@@ -1,0 +1,42 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
+}
+
+.country{
+  display: flex;
+  flex-direction: row;
+}
+
+.country div{
+  border:1px solid #a9a9a9;
+  flex:1;
+  text-align:center;
+  height: 60px;
+  overflow: hidden;
+
+}
+
+.right{
+  margin-right:6px;
+}
+
+h3{
+  font-size: 10px;
+}
+
+span{
+  font-size:20px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+  .country{
+    flex-direction: column;
+  }
+  .right{
+    margin-right: 0;
+  }
+}
+

@@ -1,0 +1,10 @@
+<div class="states">
+  <h2>States</h2>
+  <div class="scroll">
+    <div *ngFor="let state of states"  class="state">
+      <div>
+        <a [routerLink]="[state.Country,state.ThreeLetterSymbol]" routerLinkActive="active">{{state.Country}}</a>
+      </div>
+    </div>
+  </div>
+</div>
