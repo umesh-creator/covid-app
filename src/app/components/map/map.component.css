@@ -11,4 +11,11 @@
   cursor: pointer;
 }
 
+@media only screen and (max-width: 768px){
+  #map{
+    height: 60vh;
+  }
+}
+
+
 
